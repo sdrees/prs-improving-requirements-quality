@@ -62,8 +62,7 @@ Run the following command to update the requirements.txt before pushing to GIT:
 1. `venv/bin/pip freeze > requirements.txt`
 2. Remove `en-core-web-sm==2.0.0` from requirements.txt
 
-NOTE: If you run `pip freeze > requirements.txt` from a normal terminal, you will include all global packages, 
-creating a bloated file. Please only use this command from a virtual environment where you are certain of the packages.
+NOTE: If you run `pip freeze > requirements.txt` from a normal terminal, you will include all global packages, creating a bloated file. Please only use this command from a virtual environment where you are certain of the packages.
 
 #### Running Tests
 
@@ -81,6 +80,15 @@ Run the following commands to generate test-coverage files. The XML is necessary
 
 #### Available Demos
 
+**csv - Ambiguity Counts**: This is a demo package for a webpage that loads a CSV, and runs each requirement through the API. Producing a count of ambiguities found.
+1. Prepare a CSV file with a single column, where each row is a requirement
+2. Upload that CSV using the button provided by this demo
+
+**csv - Visualisation**: This is a demo package for a webpage that loads a CSV, and runs each requirement through the API. It they displays the output visually as highlighted smells.
+1. Prepare a CSV file with a single column, where each row is a requirement
+2. If you wish, separating sets of requirements with an empty line causes some visual formatting with the output
+3. Upload that CSV using the button provided by this demo
+
 **iFrame Functionality**: NOT CURRENTLY FUNCTIONAL, ALTHOUGH FIXABLE
 It is possible to query the functioning API in your web browser, with URL parameters, and it 
 will act as a stand-alone page.∏
@@ -89,10 +97,6 @@ Instructions on Use:
 2. Open the following your browser: 
 `http://0.0.0.0:9799/index?requirementTitle=Requirement%20Title&requirementText=This%20is%20not%20a%20good%20requirement.`
 3. Alter the URL Parameters as you want for different Titles and Text passed to the API
-
-**CSV Input**: This is a demo package for a webpage that loads a CSV, and runs each requirement through the API.
-1. Prepare a CSV file with a single column, where each row is a requirement
-2. If you wish, separating sets of requirements with an empty line causes some visual formatting with the output
 
 ### Sources
 
