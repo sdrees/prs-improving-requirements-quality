@@ -41,8 +41,15 @@ class TestCheckPOSRegexs(unittest.TestCase):
 
     def test_algorithm_reached_and_found(self):
         response = self._call_check_quality('The system will sound an alarm when the key is inserted.')
-        item = self._get_single_item_from_response(response, 'Passive Ambiguity')
-        self.assertEqual(item['title'], 'Passive Ambiguity')
+        item = self._get_single_item_from_response(response, 'Passive Voice Ambiguity')
+        self.assertEqual(item['title'], 'Passive Voice Ambiguity')
+
+    def test_contraction(self):
+        response = self._call_check_quality("It's recommended.")
+        item = self._get_single_item_from_response(response, 'Passive Voice Ambiguity')
+        self.assertEqual(item['title'], 'Passive Voice Ambiguity')
+        self.assertEqual(item['index_start'], 3)
+        self.assertEqual(item['index_end'], 16)
 
 
 if __name__ == '__main__':

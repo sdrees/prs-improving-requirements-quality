@@ -1,5 +1,5 @@
 [run]
-omit = coverage-reports/*, demos/*, tests/*, venv/*
+omit = coverage-reports/*, demos/*, tests/*, venv/*, test_all.py
 
 [html]
 directory = coverage-reports/html
@@ -10,3 +10,4 @@ output = coverage-reports/coverage.xml
 [report]
 exclude_lines =
     if __name__ == .__main__.:
+    if self.is_logging:
